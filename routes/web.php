@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/register', function () {
-    return view('registerchoice');
-});
+Route::get('/', function () {
+    return view('welcome');
+}
