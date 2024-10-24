@@ -1,0 +1,85 @@
+html{
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(to bottom, #181818 0%, #151A30 14%, #121C54 33%, #101E64 50%, #0E1F7A 65%, #0923AD 100%);
+}
+
+.asking{
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin-top: 6vw;
+    font-size: 65px;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+.registerChoices{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.optionHack{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin-right: 50px;
+    background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    border-radius: 8px;
+}
+
+.hookHack{
+    color: white;
+}
+
+.sinHack{
+    color: #FFC700;
+}
+
+.optionHack:hover{
+    color: white;
+    .hookHack{color:black};
+    .sinHack{color:black};
+    text-shadow: 0 0 0;
+}
+
+.optionCompany{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin-left: 50px;
+    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    border-radius: 8px;
+}
+
+.hookComp{
+    color: white;
+}
+
+.sinComp{
+    color: #CC00FF;
+}
+
+.optionCompany:hover{
+    color: white;
+    .hookComp{color:black};
+    .sinComp{color:black};
+    text-shadow: 0 0 0;
+}
