@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #181818;
+    width: 100%;
+    height: 210px;
+}
+
+.nav .above-line {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.above-line #title {
+    color: white;
+    font-size: 40px;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+.above-line .vert-line {
+    color: #CC00FF;
+}
+
+.above-line .right-side {
+    color: white;
+    font-size: 16px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.above-line {
+    height: 163px;
+    border-bottom: 1px solid #CC00FF;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 50px;
+    gap: 10px;
+}
+
+.right-side a {
+    text-decoration: none;
+    color: white;
+}
+
+.right-upper-side {
+    width: 70%;
+    display: grid;  
+    grid-template-columns: 65% 35%;
+    text-align: end;
+    align-items: center;
+}
+
+.right-upper-side .with-border {
+    border-right: 1px solid #CC00FF;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.right-upper-side .reg-button {
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.right-upper-side #reg-button {
+    background-color: #CC00FF;
+    padding: 5px 12px 5px 12px;
+    border-radius: 15px;
+}
