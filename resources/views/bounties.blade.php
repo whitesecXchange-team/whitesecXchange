@@ -6,11 +6,13 @@
     <meta name="theme-color" content="#000000"/>
     <meta name="description" content="W" />
     <link rel="stylesheet" type="text/css" href="./css/bounty.css"/>
+    @include('header')
     <title>White Hat</title>
     
 </head>
 <body>
     <div class="bounty">
+        @include('nav')
         <div class="column_one">
             <div class="columnsearch container-xs">
                 <label class="search ui input gray_600 size-md underline square">
