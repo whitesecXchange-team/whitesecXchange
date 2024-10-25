@@ -15,7 +15,7 @@
                         <a href="login">login</a>
                     </div>
                     <div class="reg-button">
-                        <a href="registerchoose" id="reg-button">register</a>
+                        <a href="register-choice" id="reg-button">register</a>
                     </div>
                 </div>
                 <div class="right-bottom-side">
