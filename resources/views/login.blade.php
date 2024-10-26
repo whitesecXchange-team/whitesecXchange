@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type = "text/css"href="./css/Login.css"/>
+    <link rel="stylesheet" type = "text/css"href="{{ asset('css/login.css') }}"/>
 
 </head>
 <body>
