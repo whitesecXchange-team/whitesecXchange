@@ -1,0 +1,101 @@
+.login-2 {
+    padding-top: 228px;
+    padding-bottom: 228px;
+    background: linear-gradient(180deg, #181818, #141a39, #101d5e, #00208f);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1050px) {
+    .login-2 {
+        padding-top: var(--space-4xl);
+        padding-bottom: var(--space-4xl);
+    }
+}
+
+.columnlogintoyo {
+    margin-bottom: 4px;
+    padding-left: 56px;
+    padding-right: 56px;
+    gap: 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1050px) {
+    .columnlogintoyo {
+        gap: 87px;
+        padding-left: var(--space-4xl);
+        padding-right: var(--space-4xl);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .columnlogintoyo {
+        gap: 58px;
+    }
+}
+
+.columnusername {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1050px) {
+    .columnusername {
+        width: 100%;
+    }
+}
+.username {
+    color: var(--white_a700) !important;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    font-family: Rounded Mplus 1c;
+    font-size: 16px;
+    align-self: stretch;
+    height: 30px;
+    border-bottom: 1px solid var(--white_a700) !important;
+}
+
+.password {
+    color: var(--white_a700) !important;
+    margin-top: 62px;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    font-family: Rounded Mplus 1c;
+    font-size: 16px;
+    align-self: stretch;
+    height: 28px;
+    border-bottom: 1px solid var(--white_a700) !important;
+}
+
+.forgotpassword-link {
+    margin-top: 6px;
+    align-self: start;
+}
+
+.forgotpassword {
+    color: var(--gray_500) !important;
+}
+
+.submit {
+    color: var(--white_a700) !important;
+    margin-top: 58px;
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+    font-size: 15px;
+    background-color: var(--indigo_a700_01) !important;
+    height: 26px;
+    min-width: 80px;
+    border-radius: 8px !important;
+}
+
+.confirmation {
+    color: var(--gray_500) !important;
+    margin-top: 4px;
+}

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type = "text/css"href="{{ asset('css/login.css') }}"/>
     @include('header')
-    <link rel="stylesheet" type = "text/css"href="./css/Login.css"/>
     <title>Login | whitesecXchange</title>
 </head>
 <body>
