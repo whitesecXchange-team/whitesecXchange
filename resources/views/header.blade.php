@@ -5,4 +5,4 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nanum+Gothic:wght@400;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Share+Tech+Mono&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{asset('css/main.css')}}">
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
