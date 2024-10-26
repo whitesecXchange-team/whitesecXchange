@@ -5,11 +5,12 @@
 
 .nav {
     position: fixed;
-    overflow: hidden; 
+    overflow: hidden;
     top: 0px;
     background-color: #181818;
     width: 100%;
     height: 210px;
+    z-index: 99;
 }
 
 .nav .above-line {
@@ -20,19 +21,38 @@
     width: 100%;
 }
 
+.above-line .title-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .above-line #title {
     color: white;
+    width: fit-content;
     font-size: 40px;
     font-family: "Share Tech Mono", monospace;
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    align-content: center;
     text-decoration: none;
     text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.25);
+    transition: 0.3s;
+}
+
+.above-line #title:hover {
+    color: #CC00FF;
 }
 
 .above-line .vert-line {
     color: #CC00FF;
+    transition: 0.3s;
+}
+
+.above-line #title:hover .vert-line {
+    color: #0029FF;
 }
 
 .above-line .right-side {
@@ -64,7 +84,7 @@
 
 .right-upper-side {
     width: 70%;
-    display: grid;  
+    display: grid;
     grid-template-columns: 65% 35%;
     text-align: end;
     align-items: center;
@@ -77,6 +97,14 @@
     padding-bottom: 5px;
 }
 
+.with-border a {
+    transition: 0.3s;
+}
+
+.with-border a:hover {
+    color: #707070;
+}
+
 .right-upper-side .reg-button {
     margin-left: 5px;
     margin-top: 3px;
@@ -87,6 +115,19 @@
     background-color: #CC00FF;
     padding: 5px 12px 5px 12px;
     border-radius: 15px;
+    transition: 0.3s;
+}
+
+#reg-button:hover {
+    background-color: #0029FF;
+}
+
+.right-bottom-side a {
+    transition: 0.3s;
+}
+
+.right-bottom-side a:hover {
+    color: #707070;
 }
 
 .below-line {
@@ -110,4 +151,10 @@
     color: #CC00FF;
     text-decoration: none;
     text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.25);
+    transition: 0.3s;
 }
+
+.nav-selection a:hover {
+    color: #0029FF;
+}
+

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @include('header')
-    <link rel="stylesheet" href="{{asset('css/nav.css')}}">
-</head>
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
 <body>
     <div class="nav">
         <div class="above-line">
             <p class="blank"></p>
-            <a href="/" id="title">whitesec <span class="vert-line">|</span>xchange</a>
+            <div class="title-container">
+                <a href="/" id="title">whitesec <span class="vert-line">|</span>xchange</a>
+            </div>
             <div class="right-side">
                 <div class="right-upper-side">
                     <div class="with-border">

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     @include('header')
-    <title>Bounties | whitesecXchange</title>
+    <link rel="stylesheet" href="{{ asset('css/bounty.css') }}">
+    <title>White Hat</title>
 </head>
 @include('nav')
 <body>
