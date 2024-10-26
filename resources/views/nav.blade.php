@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @include('header')
-    <link rel="stylesheet" href="{{asset('css/nav.css')}}">
-</head>
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
 <body>
     <div class="nav">
         <div class="above-line">

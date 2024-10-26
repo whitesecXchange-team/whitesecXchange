@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000"/>
     <title>White Hat</title>
 
-    <link rel="stylesheet" href="./css/registerchoice.css">
+    <link rel="stylesheet" href="{{ asset('css/registerchoice.css') }}">
 </head>
 <body>
     <div class="asking">
