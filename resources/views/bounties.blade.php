@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000"/>
-    <meta name="description" content="W" />
-    <link rel="stylesheet" type="text/css" href="./css/bounty.css"/>
     @include('header')
     <title>White Hat</title>
-    
+
 </head>
 <body>
+    @include('nav')
     <div class="bounty">
-        @include('nav')
         <div class="column_one">
             <div class="columnsearch container-xs">
                 <label class="search ui input gray_600 size-md underline square">
@@ -49,7 +44,7 @@
 
                                 </div>
                                     <p class="price ui text">$$$</p>
-                                </div> 
+                                </div>
                                     <div class ="lineseven_one-2">
                                         <p class ="bounty-5 ui text">Bounty Description</p>
                                     </div>
@@ -116,6 +111,5 @@
             </footer>
         </div>
     </div>
-    
 </body>
 </html>
