@@ -14,7 +14,7 @@
       flex-direction: column;
     }
   }
-  
+
   .rowbountytitle {
     gap: var(--space-6xl);
     align-self: end;
@@ -26,7 +26,7 @@
       align-self: stretch;
     }
   }
-  
+
   .bountytitle {
     font-size: 40px;
     font-weight: 400;
@@ -48,7 +48,7 @@
       font-size: 22px;
     }
   }
-  
+
   .price {
     color: var(--base) !important;
     font-size: 40px;
@@ -60,7 +60,7 @@
       font-size: 36px;
     }
   }
-  
+
   .lineseven_one-2 {
     height: 1px;
     margin-top: 4px;
@@ -68,7 +68,7 @@
     align-self: stretch;
     width: 100%;
   }
-  
+
   .bountypost-3 {
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
@@ -82,7 +82,7 @@
   }
 .bounty-2{
     margin-top: 8px;
-    margin-bottom: 62px; 
+    margin-bottom: 62px;
     margin-left: 38px;
     font-size: 24px;
     font-weight: 400;
@@ -109,13 +109,13 @@
       gap: 39px;
     }
   }
-  
+
   .column_one {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .columnsearch {
     gap: var(--space-8xl);
     display: flex;
@@ -125,7 +125,7 @@
       padding-right: var(--space-4xl);
     }
   }
-  
+
   .bountypost {
     gap: var(--space-8xl);
     display: flex;
@@ -146,7 +146,7 @@
         padding-left: var(--space-4xl);
         padding-right: var(--space-4xl);
     }
-}  
+}
 
 .rowprice-4{
     margin-left: 38px;
