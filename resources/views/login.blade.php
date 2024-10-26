@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @include('header')
     <link rel="stylesheet" type = "text/css"href="./css/Login.css"/>
 
 </head>
