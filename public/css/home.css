@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+    height: 83.5%;
+    /* overflow: hidden; */
+    background-color: #181818;
+}
+.bg {
+    position: relative;
+    width: inherit;
+    height: 100%;
+    background-color: #181818;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg .radial-gradient {
+    position:relative;
+    box-shadow:0px 0px 16.9px #c0f;
+    width: 98%;
+    height: 96%;
+    border-radius: 21px;
+    background:radial-gradient(1000px at center top, #181818 40%, #16192C 60%, #101D62 80%, #0C2089 85%, #0A22A1 90%, #0724BD 95%, #0029FF 100%);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.radial-gradient .container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+}
+
+.text-container {
+    width: inherit;
+    height: inherit;
+    font-family: "Share Tech Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+}
+
+.text-container .title {
+    font-size: 60px;
+    letter-spacing: 7px;
+    color: white;
+}
+
+.text-container .desc {
+    font-size: 30px;
+    color: #cc00ff;
+}
+
+.get-started-button {
+    display: flex;
+    width: inherit;
+    /* height: inherit; */
+    text-align: center;
+    justify-content: center;
+}
+
+.get-started-button a {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: white;
+    text-decoration: none;
+    background: #cc00ff;
+    padding: 10px 30px 10px 30px;
+    height: fit-content;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.get-started-button a:hover {
+    background: #0029FF;
+}
+

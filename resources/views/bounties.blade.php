@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     @include('header')
+    <link rel="stylesheet" href="{{ asset('css/bounty.css') }}">
     <title>White Hat</title>
-
 </head>
+@include('nav')
 <body>
-    @include('nav')
     <div class="bounty">
         <div class="column_one">
             <div class="columnsearch container-xs">
@@ -112,4 +112,5 @@
         </div>
     </div>
 </body>
+@include('footer')
 </html>

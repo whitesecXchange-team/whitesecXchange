@@ -8,4 +8,5 @@
 <body>
     <h1>REPORTS</h1>
 </body>
+@include('footer')
 </html>
