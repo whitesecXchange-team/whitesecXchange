@@ -3,7 +3,7 @@
 <head>
     @include('header')
     <link rel="stylesheet" type = "text/css"href="./css/Login.css"/>
-
+    <title>Login | whitesecXchange</title>
 </head>
 <body>
     <div class="login-2">
