@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     @include('header')
-    <title>login | whitesecXchange</title>
+    <link rel="stylesheet" type = "text/css"href="./css/Login.css"/>
+    <title>Login | whitesecXchange</title>
 </head>
 <body>
-    <h1>LOGIN</h1>
+    <div class="login-2">
+        <div class ="columnloginintoyo container-xs">
+            <p class= "logintoyour ui text size-titile">Login to Your Account</p>
+            <div class ="columnusername">
+                <label class ="username ui input white a_700 size -sm underline square">
+                <input name="userName" placehholder="Username" type="text"/>
+                </label>
+                    <label class="password ui input white a_700 size -sm underline square">
+                        <input name="password" placehholder="Placeholder" type="password"/>
+
+                    </label>
+                    <a href="#" class="forgotpassword-link">
+                        <p class="forgotpassword ui text size-texts">forgot password</p>
+
+
+                    </a>
+
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
