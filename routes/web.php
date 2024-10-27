@@ -33,3 +33,6 @@ Route::get('/leaderboard', function() {
 Route::get('/reports', function () {
     return view('reports');
 })->name('reports');
+
+Route::get('/hackerRegister', function(){ return view('registerHacker'); })->name('regHacker');
+Route::get('/companyRegister', function(){ return view('registerCompany'); })->name('regCompany');

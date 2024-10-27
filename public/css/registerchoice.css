@@ -7,6 +7,10 @@ body{
     background: linear-gradient(to bottom, #181818 0%, #151A30 14%, #121C54 33%, #101E64 50%, #0E1F7A 65%, #0923AD 100%);
 }
 
+a{
+    text-decoration: none;
+}
+
 .asking{
     color: white;
     border-radius: 10px;
@@ -38,7 +42,7 @@ body{
     align-items: center;
     margin-right: 50px;
     background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
     border-radius: 8px;
 }
 
