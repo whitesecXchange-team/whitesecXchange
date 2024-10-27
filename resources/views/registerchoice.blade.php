@@ -14,7 +14,7 @@
     </div>
 
     <div class="registerChoices">
-        <button class="optionHack">
+        <a href="{{ route('regHacker') }}"><button class="optionHack">
             <div class="hookHack">
                 <p>Become a Bug Hunter:<br>
                 Secure, Solve, Succeed
@@ -24,9 +24,10 @@
             <div class="sinHack">
                 <h2>Sign-up as Hacker</h2>
             </div>
-        </button>
+        </button></a>
 
-        <button class="optionCompany">
+        
+        <a href="{{ route('regCompany') }}"><button class="optionCompany">
             <div class="hookComp">
                 <p>Looking for Cyber Defense?<br>
                 Post a Bounty Now!
@@ -36,7 +37,7 @@
             <div class="sinComp">
                 <h2>Sign up as Company</h2>
             </div>
-        </button>
+        </button></a>
     </div>
 </body>
 </html>

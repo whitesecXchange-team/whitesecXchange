@@ -1,0 +1,99 @@
+form{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
+    color:white;
+    border-radius: 8px;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+    width:100%;
+    background: linear-gradient(to top,#FFC700 0%, #725C0F 61%, #181818 100%);
+    overflow:hidden;
+}
+
+
+.content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+::placeholder{
+    color: white;
+}
+
+.nameField{
+    display: flex;
+    flex-direction: column;
+}
+
+.nameField .firstName, .lastName{
+    background: rgba(255, 255, 255);
+}
+
+.loginInfo{
+    justify-content: center;
+    text-align: center;
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#username{
+    width: 50%;
+}
+
+#password{
+    width: 50%;
+}
+
+.checkRead{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hackerDesc{
+    font-size: 35px;
+    font-family:monospace, "Share Tech Mono";
+    display:grid;
+    margin:50px;
+    margin-right:auto;
+}
+
+#descLine1{
+    color:black;
+}
+
+#descLine2{
+    color:gray;
+}
+
+.btn{
+    color: black;
+    background-color: #FFC700;
+    border:none;
+    border-radius: 8px;
+    justify-content: center;
+    width:fit-content;
+    height: fit-content;
+    padding: 6px;
+}
