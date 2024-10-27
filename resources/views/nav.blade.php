@@ -11,10 +11,10 @@
             <div class="right-side">
                 <div class="right-upper-side">
                     <div class="with-border">
-                        <a href="login">login</a>
+                        <a href="{{ route('login.choice') }}">login</a>
                     </div>
                     <div class="reg-button">
-                        <a href="register-choice" id="reg-button">register</a>
+                        <a href="{{ route('register.choice') }}" id="reg-button">register</a>
                     </div>
                 </div>
                 <div class="right-bottom-side">
