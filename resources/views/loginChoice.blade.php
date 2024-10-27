@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000"/>
     <title>White Hat</title>
 
-    <link rel="stylesheet" href="{{ asset('css/registerchoice.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/loginChoice.css') }}">
 </head>
 <body>
     <div class="asking">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="registerChoices">
-        <a href="{{ route('register.hacker') }}"><button class="optionHack">
+        <a href="{{ route('login.hacker') }}"><button class="optionHack">
             <div class="hookHack">
                 <p>Become a Bug Hunter:<br>
                 Secure, Solve, Succeed
@@ -27,7 +27,7 @@
         </button></a>
 
 
-        <a href="{{ route('register.company') }}"><button class="optionCompany">
+        <a href="{{ route('login.company') }}"><button class="optionCompany">
             <div class="hookComp">
                 <p>Looking for Cyber Defense?<br>
                 Post a Bounty Now!

@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="{{ asset('css/registerCompany.css') }}">
     <title>whitesecXchange - Register as a Company</title>
     @include('header')
 </head>
 
 <body>
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 	<div class="content">
         <div class="mainForm">
-	    	<form action="" autocomplete="off">
+	    	<form action="{{ route('company.register') }}" method="POST">
+                @csrf
                     <div class="companyNameField">
 				        <label for="companyName">Company</label>
-				        <input id="companyName" name="cmopanyName" type="text" placeholder="" class="companyName">
+				        <input id="companyName" name="company_name" type="text" placeholder="" class="companyName">
                     </div>
                     <br>
-	    			<input id="email" name="email" type="email" placeholder="E-mail" class="email">
+	    			<input id="email" name="company_email" type="email" placeholder="E-mail" class="email">
     				<br>
                     <div class="loginInfo">
-                        <input id="username" name="username" type="text" placeholder="Username" class="username">
 		    		    <input id="password" name="password" type="password" placeholder="Password" class="password">
                     </div>
-                
+
                     <br>
-				    <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" class="confirmPassword">
+				    <input id="confirmPassword" name="password_confirmation" type="password" placeholder="Confirm Password" class="confirmPassword">
                     <br>
-		    		<input id="companyWebsite" name="companyWebsite" type="text" placeholder="Company Website" class="companyWebsite">
+		    		<input id="companyWebsite" name="company_url" type="text" placeholder="Company Website" class="companyWebsite">
                     <br>
 
                     <div class="checkRead">
@@ -43,7 +52,7 @@
 	    	</form>
     	</div>
 
-    
+
         <div class="compDesc" style="float:right;">
             <div id="descLine1">
                 Fortify your Defenses:
