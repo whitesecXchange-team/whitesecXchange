@@ -43,27 +43,20 @@ input {
     background: rgba(255, 255, 255);
 }
 
+.companyNameField{
+    display: flex;
+    flex-direction: column;
+}
+
 .loginInfo{
     justify-content: center;
     text-align: center;
     display:flex;
     width:100%;
     flex-direction: row;
-    gap: 15px;
+    gap: 8px;
 }
 
-#username{
-    width: 50%;
-}
-
-#password{
-    width: 50%;
-}
-
-.checkRead{
-    display: inline-block;
-    vertical-align: middle;
-}
 
 .compDesc{
     font-size: 35px;

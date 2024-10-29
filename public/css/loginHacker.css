@@ -22,10 +22,16 @@ input:-webkit-autofill:focus {
     background-clip: content-box !important; /* Clip background */
 }
 
+
+
 input {
     background-color: transparent; /* Ensure default state is transparent */
     background-clip: padding-box; /* Prevents bleed-over */
     border: none; /* Optional: remove borders if desired */
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
 }
 
 .bg {

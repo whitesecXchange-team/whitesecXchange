@@ -47,17 +47,14 @@
                     <input id="email" name="email" type="email" placeholder="E-mail" class="email">
                     <br>
 
+                    <input id="username" name="name" type="text" placeholder="Username" class="username">
+                    <br>
+
                     <div class="loginInfo">
-                        <input id="username" name="name" type="text" placeholder="Username" class="username">
                         <input id="password" name="password" type="password" placeholder="Password" class="password">
+                        <input id="confirmPassword" name="password_confirmation" type="password" placeholder="Confirm Password" class="confirmPassword">
                     </div>
-
-                    <input id="confirmPassword" name="password_confirmation" type="password" placeholder="Confirm Password" class="confirmPassword">
-
-                    <div class="checkRead">
-                        <input type="checkbox" id="terms" name="terms" value="terms">
-                        <label for="terms"> I have read and agreed to the <a href="https://www.youtube.com/embed/lproX4lLdqA?fs=1&autoplay=1">terms & conditions</a></label>
-                    </div>
+                    
                 <br>
                 <div>
                     <button class="btn" name="register" value="Submit">Submit</button>

@@ -55,20 +55,16 @@ input {
     display:flex;
     width:100%;
     flex-direction: row;
-    gap: 15px;
+    gap: 8px;
 }
 
-#username{
-    width: 50%;
-}
 
 #password{
     width: 50%;
 }
 
-.checkRead{
-    display: inline-block;
-    vertical-align: middle;
+#confirmPassword{
+    width: 50%;
 }
 
 .hackerDesc{

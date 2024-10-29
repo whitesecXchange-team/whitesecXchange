@@ -23,28 +23,19 @@
         <div class="mainForm">
 	    	<form action="{{ route('company.register') }}" method="POST">
                 @csrf
-                    <div class="companyNameField">
-				        <label for="companyName">Company</label>
-				        <input id="companyName" name="company_name" type="text" placeholder="" class="companyName">
-                    </div>
-                    <br>
-	    			<input id="email" name="company_email" type="email" placeholder="E-mail" class="email">
-    				<br>
-                    <div class="loginInfo">
-		    		    <input id="password" name="password" type="password" placeholder="Password" class="password">
-                    </div>
-
-                    <br>
+                <div class="companyNameField">
+				    <label for="companyName">Company</label>
+				    <input id="companyName" name="company_name" type="text" placeholder="" class="companyName">
+                </div>
+                <br>
+	    		    <input id="email" name="company_email" type="email" placeholder="E-mail" class="email">
+    			<br>
+                <div class="loginInfo">
+	    		    <input id="password" name="password" type="password" placeholder="Password" class="password">
 				    <input id="confirmPassword" name="password_confirmation" type="password" placeholder="Confirm Password" class="confirmPassword">
-                    <br>
-		    		<input id="companyWebsite" name="company_url" type="text" placeholder="Company Website" class="companyWebsite">
-                    <br>
-
-                    <div class="checkRead">
-                        <input type="checkbox" id="terms" name="terms" value="terms">
-                        <label for="terms"> I have read and agreed to the <a href="https://www.youtube.com/embed/lproX4lLdqA?fs=1&autoplay=1">terms & conditions</a></label><br>
-                    </div>
-
+                </div>
+                <br>
+				    <input id="companyWebsite" name="company_url" type="text" placeholder="Company Website" class="companyWebsite">
                 <br>
     			<div>
 			    	<button class="btn" name="register" value="Submit">Submit</button>
