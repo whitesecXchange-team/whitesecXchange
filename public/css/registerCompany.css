@@ -2,8 +2,8 @@ form{
     padding: 60px;
     display: flex;
     flex-direction: column;
-    gap: 5px;   
-    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    gap: 5px;
+    background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
     color:white;
     border-radius: 8px;
 }
@@ -15,7 +15,7 @@ html{
 body{
     height: 100%;
     width:100%;
-    background: linear-gradient(to top, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    background: linear-gradient(to top,#FFC700 0%, #725C0F 61%, #181818 100%);
     overflow:hidden;
 }
 
@@ -84,7 +84,7 @@ input {
 
 .btn{
     color: white;
-    background-color: #CC00FF;
+    background-color: #FFC700;
     border:none;
     border-radius: 8px;
     justify-content: center;

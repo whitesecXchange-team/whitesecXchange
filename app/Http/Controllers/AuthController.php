@@ -12,6 +12,31 @@ use Illuminate\Validation\ValidationException;
 class AuthController extends Controller
 {
     // User registration function
+
+    function show_register_choice(){
+        return view('registerchoice');
+    }
+
+    function show_login_choice() {
+        return view('loginChoice');
+    }
+
+    function show_register_hacker() {
+        return view('registerHacker');
+    }
+
+    function show_register_company() {
+        return view('registerCompany');
+    }
+
+    function show_login_hacker(){
+        return view('loginHacker');
+    }
+
+    function show_login_company(){
+        return view('loginCompany');
+    }
+
     function user_register(Request $request)
     {
         $request->validate([
@@ -31,7 +56,7 @@ class AuthController extends Controller
             'balance' => 0.00, // Default balance
         ]);
 
-        return redirect()->route('login.choice')->with('success', 'Registration successful. Please log in.');
+        return redirect()->route('login.hacker')->with('success', 'Registration successful. Please log in.');
     }
 
     // Company registration function
@@ -51,7 +76,7 @@ class AuthController extends Controller
             'company_url' => $request->company_url,
         ]);
 
-        return redirect()->route('login.choice')->with('success', 'Registration successful. Please log in.');
+        return redirect()->route('login.company')->with('success', 'Registration successful. Please log in.');
     }
 
     // User login function
@@ -62,7 +87,7 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
 
-        if (!Auth::attempt($request->only('username', 'password'))) {
+        if (!Auth::attempt($request->only('name', 'password'))) {
             throw ValidationException::withMessages([
                 'name' => ['The provided credentials are incorrect.'],
             ]);
@@ -92,4 +117,19 @@ class AuthController extends Controller
 
         return redirect()->route('company.profile', Auth::guard('company')->id());
     }
+
+    public function logout(Request $request)
+{
+        if (Auth::guard('company')->check()) {
+            Auth::guard('company')->logout();
+        } elseif (Auth::guard('web')->check()) {
+            Auth::guard('web')->logout();
+        }
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+    return redirect('/');
+}
+
 }

@@ -41,7 +41,7 @@ a{
     gap: 5px;
     align-items: center;
     margin-right: 50px;
-    background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
+    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
     border-radius: 8px;
 }
@@ -51,7 +51,7 @@ a{
 }
 
 .sinHack{
-    color: #FFC700;
+    color: #CC00FF;
 }
 
 .optionHack:hover{
@@ -68,7 +68,7 @@ a{
     gap: 5px;
     align-items: center;
     margin-left: 50px;
-    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    background: linear-gradient(to bottom, #FFC700 0%, #725C0F 61%, #181818 100%);
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
     border-radius: 8px;
 }
@@ -78,7 +78,7 @@ a{
 }
 
 .sinComp{
-    color: #CC00FF;
+    color: #FFC700;
 }
 
 .optionCompany:hover{

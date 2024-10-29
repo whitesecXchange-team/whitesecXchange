@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .nav {
     position: fixed;
     overflow: hidden;
@@ -82,12 +77,54 @@
     color: white;
 }
 
+.welcome-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.welcome-container p {
+    border-right: 1px solid #CC00FF;
+    padding-right: 15px;
+}
+
+.welcome-container a {
+    margin-left: 15px;
+    color: #CC00FF;
+    font-size: 14px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.welcome-container a:hover {
+    color: #0029FF;
+}
+
+.welcome-container .hacker-name {
+    transition: 0.3s;
+}
+
+.hacker-name:hover {
+    color: #CC00FF;
+}
+
+.welcome-container .company-name {
+    transition: 0.3s;
+}
+
+.company-name:hover {
+    color: #FFC700;
+}
+
+
 .right-upper-side {
     width: 70%;
-    display: grid;
-    grid-template-columns: 65% 35%;
+    display: flex;
     text-align: end;
     align-items: center;
+    justify-content: end;
 }
 
 .right-upper-side .with-border {
@@ -106,9 +143,10 @@
 }
 
 .right-upper-side .reg-button {
-    margin-left: 5px;
+    margin-left: 15px;
     margin-top: 3px;
     margin-bottom: 3px;
+
 }
 
 .right-upper-side #reg-button {
