@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="{{ asset('css/loginChoice.css') }}">
 </head>
 <body>
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div class="asking">
         <p>Which One are You?</p>
     </div>

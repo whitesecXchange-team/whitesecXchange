@@ -1,101 +1,143 @@
-.login-2 {
-    padding-top: 228px;
-    padding-bottom: 228px;
-    background: linear-gradient(180deg, #181818, #141a39, #101d5e, #00208f);
+body {
+    top: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
 }
 
-@media only screen and (max-width: 1050px) {
-    .login-2 {
-        padding-top: var(--space-4xl);
-        padding-bottom: var(--space-4xl);
-    }
-}
-
-.columnlogintoyo {
-    margin-bottom: 4px;
-    padding-left: 56px;
-    padding-right: 56px;
-    gap: 116px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media only screen and (max-width: 1050px) {
-    .columnlogintoyo {
-        gap: 87px;
-        padding-left: var(--space-4xl);
-        padding-right: var(--space-4xl);
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .columnlogintoyo {
-        gap: 58px;
-    }
-}
-
-.columnusername {
-    width: 46%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media only screen and (max-width: 1050px) {
-    .columnusername {
-        width: 100%;
-    }
-}
-.username {
-    color: var(--white_a700) !important;
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
-    font-family: Rounded Mplus 1c;
+input:focus {
+    outline: none;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 16px;
-    align-self: stretch;
-    height: 30px;
-    border-bottom: 1px solid var(--white_a700) !important;
+    background:none;
 }
 
-.password {
-    color: var(--white_a700) !important;
-    margin-top: 62px;
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
-    font-family: Rounded Mplus 1c;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    -webkit-text-fill-color: #000 !important; /* Set text color */
+    background-color: #ffffff !important; /* Set background color explicitly */
+    background-clip: content-box !important; /* Clip background */
+}
+
+input {
+    background-color: transparent; /* Ensure default state is transparent */
+    background-clip: padding-box; /* Prevents bleed-over */
+    border: none; /* Optional: remove borders if desired */
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title-desc-container {
+    justify-items: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.title-desc-container .title {
+    color: white;
+    font-size: 48px;
+}
+
+.form-container {
+    border-radius: 9px;
+    width: 40%;
+    height: 32%;
+    background: linear-gradient(to bottom, #CC00FF 0%, #7A0B96 61%, #181818 100%);
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .username {
+    width: 100%;
+}
+
+.form .username #username {
+    border: 0;
+    background:none;
+}
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: rgba(70, 90, 126, 0) !important;
+    color: fieldtext !important;
+}
+
+#username::placeholder {
+    font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 16px;
-    align-self: stretch;
-    height: 28px;
-    border-bottom: 1px solid var(--white_a700) !important;
+    color: white;
 }
 
-.forgotpassword-link {
-    margin-top: 6px;
-    align-self: start;
+.form .password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.forgotpassword {
-    color: var(--gray_500) !important;
-}
-
-.submit {
-    color: var(--white_a700) !important;
-    margin-top: 58px;
-    padding-left: var(--space-2xl);
-    padding-right: var(--space-2xl);
-    font-size: 15px;
-    background-color: var(--indigo_a700_01) !important;
-    height: 26px;
-    min-width: 80px;
-    border-radius: 8px !important;
-}
-
-.confirmation {
-    color: var(--gray_500) !important;
+.form hr {
     margin-top: 4px;
+}
+
+#password::placeholder {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: white;
+}
+
+.form .password #password {
+    border: 0;
+    background: none;
+
+}
+
+.password a {
+    text-decoration: none;
+    color: #989898;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+}
+
+.form .login-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: baseline;
+    gap: 8px;
+}
+
+.login-button .btn {
+    font-size: 15px;
+    width: 75px;
+    height: 27px;
+    border-radius: 8px;
+    border: none;
+    background-color: #CC00FF;
+    color: white;
+}
+
+.login-button .dont-have-acc {
+    font-family: 'Share Tech Mono', monospace;
+    color: #989898;
+}
+
+.dont-have-acc a {
+    color: #989898;
 }
