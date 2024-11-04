@@ -36,4 +36,7 @@ class Controller
         return view('reports');
     }
 
+    function show_details_bounty() {
+        return view('detailsBounty');
+    }
 }

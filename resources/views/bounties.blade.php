@@ -5,7 +5,18 @@
         <title>White Hat</title>
     </head>
     @include('nav')
-    <body>
+    <body> 
+        <!-- should be looping and just get rest from db -->
+        <a href="{{ route('bounty.details') }}" class="button"> <!-- need add auth bounty id -->
+            <div class="bounty">
+                <h2 class="bounty-title">Test our Health Application</h2>
+                <p class="company">MayFit+</p>
+                <p class="money">$200-$3000</p>
+                <hr>
+                <p class="bounty-description">Android Health Application user Database Security Testing.</p>
+            </div>
+        </a>
+        
         <a href="bounties" class="button">
             <div class="bounty">
                 <h2 class="bounty-title">My calculator is looping infinitely!</h2>
