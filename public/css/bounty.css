@@ -1,222 +1,113 @@
-/*1.common css*/
+.bounty {
+  font-family: "Share Tech Mono", monospace;
+  text-decoration: none;
+}
 
-.rowprice {
-    margin-left: 38px;
-    margin-right: 34px;
-    align-self: stretch;
-    display: flex;
-    justify-content: center;
-    @media only screen and (max-width: 1050px) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    @media only screen and (max-width: 550px) {
-      flex-direction: column;
-    }
-  }
-
-  .rowbountytitle {
-    gap: var(--space-6xl);
-    align-self: end;
-    flex: 1;
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    @media only screen and (max-width: 550px) {
-      align-self: stretch;
-    }
-  }
-
-  .bountytitle {
-    font-size: 40px;
-    font-weight: 400;
-    align-self: center;
-    @media only screen and (max-width: 1050px) {
-      font-size: 38px;
-    }
-    @media only screen and (max-width: 550px) {
-      font-size: 36px;
-    }
-  }
-
-  .company {
-    color: var(--base) !important;
-    margin-top: 6px;
-    font-size: 24px;
-    font-weight: 400;
-    @media only screen and (max-width: 1050px) {
-      font-size: 22px;
-    }
-  }
-
-  .price {
-    color: var(--base) !important;
-    font-size: 40px;
-    font-weight: 400;
-    @media only screen and (max-width: 1050px) {
-      font-size: 38px;
-    }
-    @media only screen and (max-width: 550px) {
-      font-size: 36px;
-    }
-  }
-
-  .lineseven_one-2 {
-    height: 1px;
-    margin-top: 4px;
-    background-color: var(--gray_700);
-    align-self: stretch;
-    width: 100%;
-  }
-
-  .bountypost-3 {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
-    background-color: var(--purple_a400_30);
-    box-shadow: inset 0 0 12px 0 #0000003f;
-    flex: 1;
+html, body {
+    background-color: #181818;
+    height: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: var(--radius-xl);
-  }
-.bounty-2{
-    margin-top: 8px;
-    margin-bottom: 62px;
-    margin-left: 38px;
-    font-size: 24px;
-    font-weight: 400;
-    align-self: start;
-    @media only screen and (max-width:1050){
-        font-size: 22px;
-        margin-left: 0px;
-    }
-
 }
 
-/* page css*/
+.container {
+    margin: 50px;
+    flex: 1;
+}
+
+h2, p {
+  display: inline-block;
+}
+
+h2 {
+  color: white;
+}
+
+/* p {
+  color: #CC00FF;
+} */
+
+.bounty p {
+    color: #CC00FF;
+}
 
 .bounty {
-    gap: 78px;
-    background-color: var(--gray_900_07);
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    @media only screen and (max-width: 1050px) {
-      gap: 58px;
-    }
-    @media only screen and (max-width: 550px) {
-      gap: 39px;
-    }
-  }
-
-  .column_one {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .columnsearch {
-    gap: var(--space-8xl);
-    display: flex;
-    flex-direction: column;
-    @media only screen and (max-width: 1050px) {
-      padding-left: var(--space-4xl);
-      padding-right: var(--space-4xl);
-    }
-  }
-
-  .bountypost {
-    gap: var(--space-8xl);
-    display: flex;
-    flex-direction: column;
-  }
-.bountypost-1{
-    padding-top: var(--space-x1);
-    padding-bottom: var(--space-x1);
-    gap: var(--space-md);
-    display: flex;
-    background-color: var(--purple_a400_30);
-    box-shadow: inset 0 0 12pz 2px #0000003f;
-    flex: 1;
-    flex-direction: column;
-    align-items: start;
-    border-radius: var(--radius-xl);
-    @media only screen and(max-width:1050) {
-        padding-left: var(--space-4xl);
-        padding-right: var(--space-4xl);
-    }
+  border-radius: 32px;
+  box-shadow: inset 0px 1px 10px 0px black;
+  background: rgba(204, 0, 255, .19);
+  transition: background-color 0.1s ease-in-out;
+  height: 190px;
+  width: 1186px;
+  /* margin: auto; */
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.rowprice-4{
-    margin-left: 38px;
-    margin-right: 34px;
+.bounty:hover {
+  background-color: rgba(0, 41, 255, .42);
+}
+
+.bounty:hover .company {
+  color: #fbc301;
+}
+
+.bounty:hover .money {
+  color: #fbc301;
+}
+
+.bounty h2 {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.bounty .money {
+  float: right;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.bounty .bounty-description {
+  color: white;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+a.button {
+  /* margin: auto; */
+  display: block;
+  height: 190px;
+  width: 1186px;
+  text-decoration: none;
+}
+
+.create-bounty-container {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    @media only screen and(max-width:1050px){
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    @media only screen and (max-width:550px){
-        flex-direction: column;
-    }
+    margin: 2rem;
 }
 
-.rowbountytitle-4{
-    gap: var(--space-6xl);
-    flex: 1;
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    @media only screen and(max-width:550px){
-        align-self: stretch;
-
-    }
-}
-.bountytitle-4{
-    align-self: center;
-}
-.company-4{
-    color: var(--base) !important;
-    margin-top: 8px;
-}
-.lineseven_one-6{
-    height: 1px;
-    background-color: var(--gray_700);
-}
-.bounty-1{
-    margin-bottom: 64px;
-    margin-left: 38px;
-    @media only screen and (max-width:1050px){
-        margin-left: 0px;
-    }
-
-}
-.bountypost-2{
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
-    background-color: var(--purple_a400_30);
-    box-shadow: inset 0 0 12px 2px #0000003f;
-    flex: 1;
-    display: flex;
-    border-radius: var(--radius-xl);
-}
-
-.columnbountytit{
-    margin-bottom: 62px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.create-bounty-button {
+    color: white;
     align-items: center;
+    font-size: 20px;
+    background-color: #CC00FF;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
 }
-.bounty-5{
-    margin-top: 8px;
-    margin-left: 38px;
-    font-size: 24px;
+
+.create-bounty-container a {
+    color: white;
+    font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 400;
-    align-self: start;
-    @media only screen and (max-width:1050px){
-        font-size: 22px;
-        margin-left: 0px;
-    }
+    font-style: normal;
+    text-decoration: none;
 }

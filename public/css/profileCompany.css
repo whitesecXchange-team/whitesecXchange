@@ -1,0 +1,65 @@
+body {
+    width: 100%;
+    height: 83.5%;
+    /* overflow: hidden; */
+    background-color: #181818;
+}
+
+.content-container {
+    position: relative;
+    width: inherit;
+    height: 100%;
+    background-color: #181818;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container .radial-gradient {
+    position:relative;
+    box-shadow:0px 0px 16.9px rgb(255, 199, 0);
+    width: 98%;
+    height: 96%;
+    border-radius: 21px;
+    background:radial-gradient(1000px at center top, #181818 40%, #3c3313 55%, #67530d 75%, #c29700 90%, #ffc700 100%);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.radial-gradient .container {
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    backdrop-filter: blur(50px);
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: inherit;
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    align-items: center ;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.text-container .title {
+    font-size: 60px;
+    letter-spacing: 7px;
+    color: white;
+}
+
+.text-container .description {
+    font-size: 30px;
+    color: #cc00ff;
+}
+

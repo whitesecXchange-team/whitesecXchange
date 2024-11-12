@@ -1,0 +1,38 @@
+html, body {
+    background-color: #181818;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.report-details-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Share Tech Mono", monospace;
+    color: white;
+    margin: 40px;
+    gap: 8px;
+}
+
+.report-details-container .download{
+    color: #CC00FF;
+    text-decoration: none;
+}
+
+.back-link {
+    background-color: #CC00FF;
+    padding: 3px 15px 3px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+

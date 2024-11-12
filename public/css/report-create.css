@@ -1,0 +1,31 @@
+html, body {
+    background-color: #181818;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.report-form-container {
+    margin: 40px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    color: white;
+    font-family: "Share Tech Mono", monospace;
+    color: white;
+    gap: 10px;
+}
+
+.creation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.bounty-title {
+    color: #CC00FF;
+}

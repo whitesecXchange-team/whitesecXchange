@@ -1,0 +1,60 @@
+html, body {
+    background-color: #181818;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.bounty-details-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bounty-details-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Share Tech Mono", monospace;
+    color: white;
+    margin: 40px;
+    gap: 8px;
+}
+
+.bounty-details-container .company {
+    color: #CC00FF;
+}
+
+.bounty-details-container .reward {
+    font-size: 30px;
+    color: #FFC700;
+    letter-spacing: 2px;
+}
+
+.description-container {
+    background-color: #393939;
+    width: 50%;
+    height: 30%;
+    margin: 40px;
+    box-shadow: 0px 0px 16.9px white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.submit-report-button{
+    background-color: #CC00FF;
+    padding: 3px 15px 3px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}

@@ -1,0 +1,149 @@
+body {
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+input:focus {
+    outline: none;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+    background:none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    -webkit-text-fill-color: #000 !important; /* Set text color */
+    background-color: #ffffff !important; /* Set background color explicitly */
+    background-clip: content-box !important; /* Clip background */
+}
+
+
+
+input {
+    background-color: transparent; /* Ensure default state is transparent */
+    background-clip: padding-box; /* Prevents bleed-over */
+    border: none; /* Optional: remove borders if desired */
+}
+
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#FFC700 0%, #725C0F 61%, #181818 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.title-desc-container {
+    justify-items: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.title-desc-container .title {
+    color: white;
+    font-size: 48px;
+}
+
+.form-container {
+    border-radius: 9px;
+    width: 40%;
+    height: 32%;
+    background: linear-gradient(to top,#FFC700 0%, #725C0F 61%, #181818 100%);  
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .username {
+    width: 100%;
+}
+
+.form .username #username {
+    border: 0;
+    background:none;
+}
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: rgba(70, 90, 126, 0) !important;
+    color: fieldtext !important;
+}
+
+#username::placeholder {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.form .password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form hr {
+    margin-top: 4px;
+}
+
+#password::placeholder {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    color: white;
+}
+
+.form .password #password {
+    border: 0;
+    background: none;
+
+}
+
+.password a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+}
+
+.form .login-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: baseline;
+    gap: 8px;
+}
+
+.login-button .btn {
+    font-size: 15px;
+    width: 75px;
+    height: 27px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFC700;
+    color: black;
+}
+
+.login-button .dont-have-acc {
+    font-family: 'Share Tech Mono', monospace;
+    color: #787878;
+}
+
+.dont-have-acc a {
+    color: #989898;
+}
