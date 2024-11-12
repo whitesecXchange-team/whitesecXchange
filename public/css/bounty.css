@@ -1,5 +1,6 @@
 a {
   font-family: "Share Tech Mono", monospace;
+  text-decoration: none;
 }
 
 body {
@@ -17,8 +18,12 @@ h2 {
   color: white;
 }
 
-p {
+/* p {
   color: #CC00FF;
+} */
+
+.bounty p {
+    color: #CC00FF;
 }
 
 .bounty {
@@ -73,4 +78,21 @@ a.button {
   height: 190px;
   width: 1186px;
   text-decoration: none;
+}
+
+.create-bounty-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.create-bounty-button {
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    background-color: #CC00FF;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
 }

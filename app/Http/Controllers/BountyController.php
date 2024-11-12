@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorebountyRequest;
 use App\Http\Requests\UpdatebountyRequest;
 use App\Models\bounty;
+use Illuminate\Container\Attributes\Auth;
+use Illuminate\Http\Request;
 
 class BountyController extends Controller
 {
@@ -21,15 +23,31 @@ class BountyController extends Controller
      */
     public function create()
     {
-        //
+        return view('bountyCreate');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorebountyRequest $request)
+    public function store(Request $request)
     {
-        //
+        // Validate the input
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'reward' => 'required|numeric',
+        ]);
+
+        // Create the bounty in the database
+        Bounty::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'reward' => $request->input('reward'),
+            'company_id' => auth('company')->id(), // assumes company_id is the authenticated company's ID
+        ]);
+
+        // Redirect back to the bounties page with a success message
+        return redirect()->route('bounties')->with('success', 'Bounty created successfully!');
     }
 
     /**
