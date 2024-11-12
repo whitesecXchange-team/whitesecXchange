@@ -7,16 +7,17 @@
     </head>
     @include('nav')
     <body>
+        <div class="container">
 
-        <!-- Conditionally show 'Create Bounty' button for company guard -->
-        @auth('company')
-        <div class="create-bounty-container">
-            <a href="{{ route('bounty.create') }}" class="create-bounty-button">Create Bounty</a>
-        </div>
-        @endauth
+            <!-- Conditionally show 'Create Bounty' button for company guard -->
+            @auth('company')
+            <div class="create-bounty-container">
+                <a href="{{ route('bounty.create') }}" class="create-bounty-button">create bounty</a>
+            </div>
+            @endauth
 
-        <!-- Display bounties from the database -->
-        @foreach($bounties as $bounty)
+            <!-- Display bounties from the database -->
+            @foreach($bounties as $bounty)
             <a href="{{ route('bounty.details', ['id' => $bounty->id]) }}" class="button">
                 <div class="bounty">
                     <h2 class="bounty-title">{{ $bounty->title }}</h2>
@@ -26,7 +27,8 @@
                     <p class="bounty-description">{{ $bounty->description }}</p>
                 </div>
             </a>
-        @endforeach
+            @endforeach
+        </div>
 
     </body>
     @include('footer')

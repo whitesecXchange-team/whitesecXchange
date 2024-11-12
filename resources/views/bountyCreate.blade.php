@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         @include('header')
-        <link rel="stylesheet" href="{{ asset('css/createBounty.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bountyCreate.css') }}">
         <title>Create Bounty</title>
     </head>
     @include('nav')
@@ -26,25 +26,22 @@
 
                 <!-- Title Input -->
                 <div class="form-group">
-                    <label for="title">Bounty Title</label>
-                    <input type="text" id="title" name="title" value="{{ old('title') }}" required>
+                    <input type="text" id="title" name="title" value="{{ old('title') }}" placeholder="Bounty Title" required>
                 </div>
 
                 <!-- Description Input -->
                 <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" rows="4" required>{{ old('description') }}</textarea>
+                    <textarea id="description" name="description" rows="4" placeholder="Description" required>{{ old('description') }}</textarea>
                 </div>
 
                 <!-- Reward Input -->
                 <div class="form-group">
-                    <label for="reward">Reward</label>
-                    <input type="text" id="reward" name="reward" value="{{ old('reward') }}" required>
+                    <input type="text" id="reward" name="reward" value="{{ old('reward') }}" placeholder="Reward" required>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="form-group">
-                    <button type="submit" class="btn">Create Bounty</button>
+                    <button type="submit" class="btn">create bounty</button>
                 </div>
             </form>
         </div>

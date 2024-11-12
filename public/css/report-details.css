@@ -6,7 +6,7 @@ html, body {
     flex-direction: column;
 }
 
-.form-container {
+.report-details-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -14,20 +14,25 @@ html, body {
     font-family: "Share Tech Mono", monospace;
     color: white;
     margin: 40px;
-    gap: 10px;
+    gap: 8px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px
+.report-details-container .download{
+    color: #CC00FF;
+    text-decoration: none;
 }
 
-.btn {
-    color: white;
+.back-link {
     background-color: #CC00FF;
-    padding: 3px 10px 3px 10px;
+    padding: 3px 15px 3px 15px;
     border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
 }
+
+
 

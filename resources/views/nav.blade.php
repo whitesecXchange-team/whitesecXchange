@@ -41,9 +41,6 @@
                             <a href="{{ route('register.choice') }}" id="reg-button">register</a>
                         </div>
                     </div>
-                    <div class="right-bottom-side">
-                        <a href="contact-us">contact us</a>
-                    </div>
                 @endif
             </div>
         </div>

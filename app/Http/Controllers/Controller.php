@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\bounty;
+use App\Models\report;
 use Illuminate\Support\Facades\Auth;
 
 use function PHPUnit\Framework\returnArgument;
@@ -29,10 +30,7 @@ class Controller
     }
 
     function show_reports_page() {
-        return view('reports');
-    }
-
-    function show_details_bounty() {
-        return view('detailsBounty');
+        $reports = report::with(['bounty', 'user'])->get();
+        return view('reports', compact('reports'));
     }
 }

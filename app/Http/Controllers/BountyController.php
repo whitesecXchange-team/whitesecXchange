@@ -26,6 +26,14 @@ class BountyController extends Controller
         return view('bountyCreate');
     }
 
+    public function show_details_bounty($id)
+    {
+    // Retrieve a single bounty by ID, with its associated company
+        $bounty = Bounty::with('company')->findOrFail($id);
+
+        return view('detailsBounty', compact('bounty'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */

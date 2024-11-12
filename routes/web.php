@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BountyController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,9 +44,14 @@ Route::get('/user/{id}/profile', [UserController::class, 'profile'])->name('user
 
 Route::get('/company/{id}/profile', [CompanyController::class, 'profile'])->name('company.profile');
 
-Route::get('/bounty/details/{id}', [Controller::class, 'show_details_bounty'])->name('bounty.details');
+Route::get('/bounty/{id}/details', [BountyController::class, 'show_details_bounty'])->name('bounty.details');
 
 Route::get('/bounty/create', [BountyController::class, 'create'])->name('bounty.create')->middleware('auth:company');
 
 Route::post('/bounty/store', [BountyController::class, 'store'])->name('bounty.store')->middleware('auth:company');
 
+Route::get('/bounty/{id}/report', [ReportController::class, 'create'])->name('report.create')->middleware('auth');
+
+Route::post('/bounty/{id}/report', [ReportController::class, 'store'])->name('report.store')->middleware('auth');
+
+Route::get('/reports/{id}', [ReportController::class, 'show'])->name('reports.show');

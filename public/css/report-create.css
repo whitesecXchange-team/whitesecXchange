@@ -6,28 +6,26 @@ html, body {
     flex-direction: column;
 }
 
-.form-container {
-    flex: 1;
+.report-form-container {
+    margin: 40px;
     display: flex;
+    flex: 1;
     align-items: center;
+    /* justify-content: center; */
     flex-direction: column;
+    color: white;
     font-family: "Share Tech Mono", monospace;
     color: white;
-    margin: 40px;
     gap: 10px;
 }
 
-form {
+.creation-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px
+    gap: 10px;
 }
 
-.btn {
-    color: white;
-    background-color: #CC00FF;
-    padding: 3px 10px 3px 10px;
-    border-radius: 10px;
+.bounty-title {
+    color: #CC00FF;
 }
-

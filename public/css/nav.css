@@ -160,14 +160,6 @@
     background-color: #0029FF;
 }
 
-.right-bottom-side a {
-    transition: 0.3s;
-}
-
-.right-bottom-side a:hover {
-    color: #707070;
-}
-
 .below-line {
     display: flex;
     align-items: center;
