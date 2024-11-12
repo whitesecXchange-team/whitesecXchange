@@ -11,7 +11,7 @@
         <div class="radial-gradient">
             <div class="container">
                 <div class="text-container">
-                    <p class="title">Greetings, company!</p> <!-- Mohon ganti template company ke nama company -->
+                    <p class="title">Greetings, {{ Auth::guard('company')->user()->company_name }}</p>
                     <p class="description">Strengthen your cyber defense by posting a bounty!</p>
                     <div class="bounties-posted-container">
                         <p>Bounties Posted</p>
