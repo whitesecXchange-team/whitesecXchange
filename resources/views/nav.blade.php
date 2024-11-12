@@ -9,17 +9,8 @@
                 <a href="/" id="title">whitesec <span class="vert-line">|</span>xchange</a>
             </div>
             <div class="right-side">
-                @if (Auth::check())
-                    <div class="welcome-container">
-                        <p>Welcome, <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" class="hacker-name">{{ Auth::user()->name }}</a></p>
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                @elseif (Auth::guard('company')->check())
+                @if (Auth::guard('company')->check())
+                    <!-- Show company name if the company guard is authenticated -->
                     <div class="welcome-container">
                         <p>Welcome, <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}" class="company-name">{{ Auth::guard('company')->user()->company_name }}</a></p>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -29,7 +20,19 @@
                             @csrf
                         </form>
                     </div>
+                @elseif (Auth::check())
+                    <!-- Show hacker name if the default user guard is authenticated and no company is authenticated -->
+                    <div class="welcome-container">
+                        <p>Welcome, <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" class="hacker-name">{{ Auth::user()->name }}</a></p>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
                 @else
+                    <!-- Show login/register options if no user or company is logged in -->
                     <div class="right-upper-side">
                         <div class="with-border">
                             <a href="{{ route('login.choice') }}">login</a>
@@ -41,7 +44,6 @@
                     <div class="right-bottom-side">
                         <a href="contact-us">contact us</a>
                     </div>
-
                 @endif
             </div>
         </div>
@@ -49,7 +51,6 @@
             <ul class="nav-selection">
                 <li id="bounties"><a href="{{ route('bounties') }}">BOUNTIES</a></li>
                 <li id="about-us"><a href="{{ route('about-us') }}">ABOUT US</a></li>
-                <li id="leaderboard"><a href="{{ route('leaderboard') }}">LEADERBOARD</a></li>
                 <li id="reports"><a href="{{ route('reports.page') }}">REPORTS</a></li>
             </ul>
         </div>

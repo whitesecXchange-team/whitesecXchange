@@ -1,49 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> @include('header')
+    <head>
+        @include('header')
         <link rel="stylesheet" href="{{ asset('css/bounty.css') }}">
         <title>White Hat</title>
     </head>
     @include('nav')
-    <body> 
-        <!-- should be looping and just get rest from db -->
-        <a href="{{ route('bounty.details') }}" class="button"> <!-- need add auth bounty id -->
-            <div class="bounty">
-                <h2 class="bounty-title">Test our Health Application</h2>
-                <p class="company">MayFit+</p>
-                <p class="money">$200-$3000</p>
-                <hr>
-                <p class="bounty-description">Android Health Application user Database Security Testing.</p>
-            </div>
-        </a>
-        
-        <a href="bounties" class="button">
-            <div class="bounty">
-                <h2 class="bounty-title">My calculator is looping infinitely!</h2>
-                <p class="company">Script Kiddie</p>
-                <p class="money">$$$</p>
-                <hr>
-                <p class="bounty-description">Hey man, uhh I just started coding recently, and it isn't going well... Can you fix this issue I sent? For some reason the calculations don't add up, for example 2 + 2 = 8, and 3 + 3 = 18. I'm sure I followed the youtube tutorial properly, I even asked my classmate to review it for me, and he didn't find any abnormalities!</p>
-            </div>
-        </a>
-        <a href="bounties" class="button">
-            <div class="bounty">
-                <h2 class="bounty-title">Giveaway!!! [No Bug Bounty Required!!!]</h2>
-                <p class="company">Trustworthy Man</p>
-                <p class="money">$$$</p>
-                <hr>
-                <p class="bounty-description">Last one to visit this page receives 100 simoleons!</p>
-            </div>
-        </a>
-        <a href="bounties" class="button">
+    <body>
+
+        <!-- Conditionally show 'Create Bounty' button for company guard -->
+        @auth('company')
+        <div class="create-bounty-container">
+            <a href="{{ route('bounty.create') }}" class="create-bounty-button">Create Bounty</a>
+        </div>
+        @endauth
+
+        <!-- Display bounties from the database -->
+        @foreach($bounties as $bounty)
+            <a href="{{ route('bounty.details', ['id' => $bounty->id]) }}" class="button">
                 <div class="bounty">
-                <h2 class="bounty-title">Test Post</h2>
-                <p class="company">OwO</p>
-                <p class="money">$$$</p>
-                <hr>
-                <p class="bounty-description">Ayy lmao ( ͡° ͜ʖ ͡°)</p>
-            </div>
-        </a>
+                    <h2 class="bounty-title">{{ $bounty->title }}</h2>
+                    <p class="company">{{ $bounty->company->company_name }}</p> <!-- Assuming 'company' is a relationship -->
+                    <p class="money">${{ $bounty->reward }}</p>
+                    <hr>
+                    <p class="bounty-description">{{ $bounty->description }}</p>
+                </div>
+            </a>
+        @endforeach
+
     </body>
     @include('footer')
 </html>

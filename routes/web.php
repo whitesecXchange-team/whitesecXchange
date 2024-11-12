@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BountyController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserController;
@@ -17,8 +18,6 @@ Route::get('/contact-us', [Controller::class, 'show_contact_us'])->name('contact
 Route::get('/about-us', [Controller::class, 'show_about_us'])->name('about-us');
 
 Route::get('/bounties', [Controller::class, 'show_bounties'])->name('bounties');
-
-Route::get('/leaderboard', [Controller::class, 'show_leaderboard'])->name('leaderboard');
 
 Route::get('/reports', [Controller::class, 'show_reports_page'])->name('reports.page');
 
@@ -44,6 +43,9 @@ Route::get('/user/{id}/profile', [UserController::class, 'profile'])->name('user
 
 Route::get('/company/{id}/profile', [CompanyController::class, 'profile'])->name('company.profile');
 
-// template buat nnti diganti; 1 diganti {id} also maybe BountyController(?)
-Route::get('/bounty/1', [Controller::class, 'show_details_bounty'])->name('bounty.details');
+Route::get('/bounty/details/{id}', [Controller::class, 'show_details_bounty'])->name('bounty.details');
+
+Route::get('/bounty/create', [BountyController::class, 'create'])->name('bounty.create')->middleware('auth:company');
+
+Route::post('/bounty/store', [BountyController::class, 'store'])->name('bounty.store')->middleware('auth:company');
 

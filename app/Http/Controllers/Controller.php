@@ -23,13 +23,9 @@ class Controller
 
     function show_bounties() {
 
-        $bounties = bounty::all();
+        $bounties = bounty::with('company')->get();
 
-        return view('bounties');
-    }
-
-    function show_leaderboard() {
-        return view('leaderboard');
+        return view('bounties', compact('bounties'));
     }
 
     function show_reports_page() {
