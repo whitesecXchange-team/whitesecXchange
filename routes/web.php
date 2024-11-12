@@ -46,3 +46,4 @@ Route::get('/company/{id}/profile', [CompanyController::class, 'profile'])->name
 
 // template buat nnti diganti; 1 diganti {id} also maybe BountyController(?)
 Route::get('/bounty/1', [Controller::class, 'show_details_bounty'])->name('bounty.details');
+
