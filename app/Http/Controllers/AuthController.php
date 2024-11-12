@@ -114,7 +114,7 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request)
-{
+    {
         if (Auth::guard('company')->check()) {
             Auth::guard('company')->logout();
         } elseif (Auth::guard('web')->check()) {
@@ -124,16 +124,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-    return redirect('/');
-}
-    public function leaderboard()
-    {
-        $users = User::select('name', 'balance')
-                     ->orderBy('balance', 'desc')
-                     ->orderBy('name', 'asc')
-                     ->get();
-
-        return view('leaderboard', compact('users'));
+        return redirect('/');
     }
-
 }

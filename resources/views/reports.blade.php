@@ -27,7 +27,7 @@
                     <tr>
                         <td>{{ $report->title }}</td>
                         <td>{{ $report->bounty->title }}</td>
-                        <td>{{ $report->user->name ?? 'N/A' }}</td> <!-- Change to company name if applicable -->
+                        <td>{{ $report->user->name ?? 'N/A' }}</td>
                         <td>{{ $report->created_at->format('Y-m-d') }}</td>
                         <td>
                             <a href="{{ route('reports.show', ['id' => $report->id]) }}" class="view-link">View Details</a>

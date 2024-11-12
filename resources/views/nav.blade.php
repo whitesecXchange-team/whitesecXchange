@@ -10,7 +10,6 @@
             </div>
             <div class="right-side">
                 @if (Auth::guard('company')->check())
-                    <!-- Show company name if the company guard is authenticated -->
                     <div class="welcome-container">
                         <p>Welcome, <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}" class="company-name">{{ Auth::guard('company')->user()->company_name }}</a></p>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -21,7 +20,6 @@
                         </form>
                     </div>
                 @elseif (Auth::check())
-                    <!-- Show hacker name if the default user guard is authenticated and no company is authenticated -->
                     <div class="welcome-container">
                         <p>Welcome, <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" class="hacker-name">{{ Auth::user()->name }}</a></p>
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -32,7 +30,6 @@
                         </form>
                     </div>
                 @else
-                    <!-- Show login/register options if no user or company is logged in -->
                     <div class="right-upper-side">
                         <div class="with-border">
                             <a href="{{ route('login.choice') }}">login</a>
