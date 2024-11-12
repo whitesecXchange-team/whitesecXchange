@@ -126,5 +126,14 @@ class AuthController extends Controller
 
     return redirect('/');
 }
+    public function leaderboard()
+    {
+        $users = User::select('name', 'balance')
+                     ->orderBy('balance', 'desc')
+                     ->orderBy('name', 'asc')
+                     ->get();
+
+        return view('leaderboard', compact('users'));
+    }
 
 }
