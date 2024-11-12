@@ -15,9 +15,8 @@
             <p class="description">{{ $bounty->description }}</p>
         </div>
 
-        <!-- Conditionally show the 'Submit Report' button for normal users -->
         @auth
-            @if (Auth::guard('web')->check()) <!-- Check if the authenticated user is not a company -->
+            @if (Auth::guard('web')->check())
                 <form action="{{ route('report.create', ['id' => $bounty->id]) }}" method="GET">
                     @csrf
                     <button type="submit" class="submit-report-button">submit a report</button>

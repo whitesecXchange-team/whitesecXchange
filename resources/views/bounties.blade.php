@@ -9,14 +9,12 @@
     <body>
         <div class="container">
 
-            <!-- Conditionally show 'Create Bounty' button for company guard -->
             @auth('company')
             <div class="create-bounty-container">
                 <a href="{{ route('bounty.create') }}" class="create-bounty-button">create bounty</a>
             </div>
             @endauth
 
-            <!-- Display bounties from the database -->
             @foreach($bounties as $bounty)
             <a href="{{ route('bounty.details', ['id' => $bounty->id]) }}" class="button">
                 <div class="bounty">
