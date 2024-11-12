@@ -4,6 +4,7 @@ body {
     /* overflow: hidden; */
     background-color: #181818;
 }
+
 .content-container {
     position: relative;
     width: inherit;
