@@ -7,6 +7,15 @@
 </head>
 <body>
     <div class="bg">
+        @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <div class="title-desc-container">
             <div class="title">
                 <p>Our hunters are ready to help!</p>
@@ -16,7 +25,7 @@
             <form action="{{ route('company.login') }}" method="POST" class="form">
                 @csrf
                 <div class="username">
-                    <input id="username" name="name" type="text" placeholder="Username">
+                    <input id="username" name="company_name" type="text" placeholder="Username">
                     <hr>
                 </div>
                 <div class="password">

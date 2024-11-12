@@ -100,18 +100,13 @@ class AuthController extends Controller
     function company_login(Request $request)
     {
         $request->validate([
-            'company_email' => 'required|email',
+            'company_name' => 'required|string',
             'password' => 'required|string',
         ]);
 
-        $credentials = [
-            'company_email' => $request->company_email,
-            'password' => $request->password,
-        ];
-
-        if (!Auth::guard('company')->attempt($credentials)) {
+        if (!Auth::guard('company')->attempt($request->only('company_name', 'password'))) {
             throw ValidationException::withMessages([
-                'company_email' => ['The provided credentials are incorrect.'],
+                'company_name' => ['The provided credentials are incorrect.'],
             ]);
         }
 
