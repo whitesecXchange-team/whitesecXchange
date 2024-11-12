@@ -39,6 +39,8 @@ Route::post('/login/company', [AuthController::class, 'company_login'])->name('c
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/leaderboard', [AuthController::class, 'leaderboard'])->name('leaderboard');
+
 Route::get('/user/{id}/profile', [UserController::class, 'profile'])->name('user.profile');
 
 Route::get('/company/{id}/profile', [CompanyController::class, 'profile'])->name('company.profile');
