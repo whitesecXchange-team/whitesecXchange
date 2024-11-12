@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="form-container">
-            <form action="{{ route('user.login') }}" method="POST" class="form">
+            <form action="{{ route('company.login') }}" method="POST" class="form">
                 @csrf
                 <div class="username">
                     <input id="username" name="name" type="text" placeholder="Username">
