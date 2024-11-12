@@ -5,13 +5,23 @@ body {
     font-family: "Share Tech Mono", monospace;
 }
 
+.bountyStuff{
+    /* box-shadow: inset 0px 1px 10px 0px black; */
+    background: #CC00FF;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width:85%;
+    margin-left: 10px;
+    padding: 15px;
+}
+
 .bountyHeader{
     display:inline-block;
     color: black;
-    background-color:#CC00FF;
     width:100%;
     margin: auto;
-    margin-top: 45px;
+    margin-top: 5px;
     border-bottom: 5px solid gray;
 }
 
@@ -21,18 +31,35 @@ hr{
 
 .bountyHeader .companyName{
     float: right;
+    color: rgba(0, 41, 255, .42);
+    opacity: 0.7;
+    background-color: transparent;
+    border: 0;
+}
+
+.bountyHeader .companyName:hover{
+    opacity: 1.0;
 }
 
 .bountyDescription{    
-    background-color:#CC00FF;
     color: black;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.bountyDescription .detailedDesc{
     margin-bottom: 10px;
 }
 
-.bountyDescription .price{
+
+.price{
     color: yellow;
+
 }
 
 .reportSubmission{
-    background-color:#CC00FF;
+    background-color:rgba(0, 41, 255, .42);
+    color: yellow;
+    width:15%;
+    float: right;
 }
