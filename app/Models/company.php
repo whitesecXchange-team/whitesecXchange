@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class company extends Model
+class company extends Authenticatable
 {
     //
     protected $fillable = [
