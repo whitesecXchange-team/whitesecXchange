@@ -10,9 +10,9 @@ else
     echo ".env file already exists. Skipping creation."
 fi
 
-php artisan key:generate
 
 composer install --optimize-autoloader --no-dev
+php artisan key:generate
 php artisan migrate --force
 php artisan storage:link
 php artisan config:cache
