@@ -55,3 +55,5 @@ Route::get('/bounty/{id}/report', [ReportController::class, 'create'])->name('re
 Route::post('/bounty/{id}/report', [ReportController::class, 'store'])->name('report.store')->middleware('auth');
 
 Route::get('/reports/{id}', [ReportController::class, 'show'])->name('reports.show');
+
+Route::get('/report/{id}/download', [ReportController::class, 'download'])->name('report.download');

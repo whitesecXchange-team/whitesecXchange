@@ -7,6 +7,8 @@ use App\Http\Requests\UpdatereportRequest;
 use App\Models\report;
 use App\Models\Bounty;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\Response;
 
 class ReportController extends Controller
 {
@@ -43,7 +45,7 @@ class ReportController extends Controller
 
         // If there's an uploaded file, save it
         if ($request->hasFile('file_path')) {
-            $filePath = $request->file('file_path')->store('reports');
+            $filePath = $request->file('file_path')->store('reports', 'public');
             $report->file_path = $filePath;
         } else {
             $report->file_path = null; // Explicitly set to null if no file is uploaded
@@ -63,6 +65,27 @@ class ReportController extends Controller
         return view('reportDetail', compact('report'));
     }
 
+
+
+    public function download($id)
+    {
+        $report = Report::with('bounty')->findOrFail($id);
+        $userId = auth('web')->id();
+        $isUploader = $userId === $report->user_id;
+        $isCompany = auth('company')->check() && auth('company')->id() === $report->bounty->company_id;
+
+        if ($isUploader || $isCompany) {
+            $filePath = public_path('storage/' . $report->file_path);
+
+            if (file_exists($filePath)) {
+                return response()->download($filePath);
+            } else {
+                abort(404, 'File not found.');
+            }
+        }
+
+        abort(Response::HTTP_FORBIDDEN, 'You are not authorized to download this file.');
+    }
     /**
      * Show the form for editing the specified resource.
      */
