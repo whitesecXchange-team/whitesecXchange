@@ -1,6 +1,17 @@
 #!/bin/bash
 
 git pull origin main
+
+if [ ! -f .env ]; then
+    echo ".env file not found. Creating it from .env.example..."
+    cp .env.example .env
+    echo ".env file created successfully."
+else
+    echo ".env file already exists. Skipping creation."
+fi
+
+php artisan key:generate
+
 composer install --optimize-autoloader --no-dev
 php artisan migrate --force
 php artisan storage:link
