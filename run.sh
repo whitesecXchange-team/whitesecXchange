@@ -13,7 +13,7 @@ fi
 
 composer install --optimize-autoloader --no-dev
 php artisan key:generate
-php artisan migrate --force
+php artisan migrate:fresh --force
 php artisan storage:link
 php artisan config:cache
 php artisan route:cache
