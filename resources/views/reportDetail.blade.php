@@ -15,7 +15,16 @@
         <p><strong>Description:</strong> {{ $report->description }}</p>
 
         @if($report->file_path)
-            <p><strong>Attached File:</strong> <a href="{{ Storage::url($report->file_path) }}" target="_blank" class="download">Download</a></p>
+            @php
+            $isUploader = auth()->id() === $report->user_id;
+            $isCompany = auth('company')->check() && auth('company')->id() === $report->bounty->company_id;
+            @endphp
+
+            @if($isUploader || $isCompany)
+                <p><strong>Attached File:</strong> <a href="{{ route('report.download', ['id' => $report->id]) }}" class="download">Download</a></p>
+            @else
+                <p><em>File download is restricted to the report uploader and the assigning company.</em></p>
+            @endif
         @endif
 
         <a href="{{ route('reports.page') }}" class="back-link">back to reports list</a>
