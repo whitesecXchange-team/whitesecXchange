@@ -27,10 +27,30 @@
             @endif
 
             
-            @if($isCompany)
+            @if($isCompany && $report->status===0)
                 <div class="company-buttons">
-                    <button class="approve-butt">Approve</button>
-                    <button class="reject-butt">Reject</button>
+                    <!-- make when press button approve: add bal, change status to 1; if reject: change status to 2; while none: 0 -->
+                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST">
+                        @csrf
+                        <button name="btn" value ="1" class="approve-butt">Approve</button></form>
+                    <form action="{{ route('report.approval', ['id' => $report->id]) }}" method="POST">
+                        @csrf
+                        <button name="btn" value="2" class="reject-butt">Reject</button></form>
+                </div>
+            @endif
+
+            @if($isUploader)
+                <div class ="approval-status">
+                    <p>Your report
+                        @if( $report->status === 0)
+                            is awaiting approval
+                        @elseif( $report->status === 1)
+                            has been approved
+                        @else
+                            has been rejected
+                        @endif
+                         <!-- depend on status: 1= is accepted, 2=has been rejected, 0=is awaiting approval -->
+                        </p>
                 </div>
             @endif
 

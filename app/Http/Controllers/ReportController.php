@@ -86,6 +86,28 @@ class ReportController extends Controller
 
         abort(Response::HTTP_FORBIDDEN, 'You are not authorized to download this file.');
     }
+
+    public function approval(Request $request, $id)
+    {
+        $report = Report::with('bounty')->findOrFail($id);
+        $isCompany = auth('company')->check() && auth('company')->id() === $report->bounty->company_id;
+
+        if($isCompany)
+        {
+            if($request->name===1){
+                $report->status = 1;
+                $report->user_id->balance += $report->bounty_id->reward;
+            }
+
+            if($request->name===2){
+                $report->status = 2;
+            }
+        }
+
+        return redirect()->route('reports.show', ['id' => $report->id])->with('success', 'Report Status Changed.');
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
