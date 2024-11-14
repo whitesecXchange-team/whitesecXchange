@@ -6,6 +6,7 @@ use App\Http\Requests\StorereportRequest;
 use App\Http\Requests\UpdatereportRequest;
 use App\Models\report;
 use App\Models\Bounty;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Response;
@@ -90,26 +91,30 @@ class ReportController extends Controller
     public function approval(Request $request, $id)
     {
         $report = Report::with('bounty')->findOrFail($id);
+        $userId = auth('web')->id();
+        $isUploader = $userId === $report->user_id;
         $isCompany = auth('company')->check() && auth('company')->id() === $report->bounty->company_id;
 
-// fails to get input request when button pressed; fails to add user balance with reward
+// reject works, still fails on adding balance to user
 
         // if($isCompany)
         // {
-            // if($request->name===1){
-                Report::where('id', $id)->update([
-                    'status' => 1],[
-                    'user_id->balance' =>  'user_id->balance'+'bounty_id->reward'
-                    ]);
-            // }
+            if($request->btn==1){
+                Report::where('id', $id)->with('bounty')->with('user')->update([
+                    'status' => 1,
+                    user->$balance => user->$balance+bounty->$reward
+                 ]);
 
-        //     if($request->name===2){
-        //         $report->status = 2;
-        //     }
+            }
+
+        if($request->btn==2){
+            Report::where('id', $id)->update([
+                'status' => 2
+            ]);
+            }
         // }
 
         return redirect()->route('reports.show', ['id' => $report->id])->with('success', 'Report Status Changed.');
-
     }
 
     /**
