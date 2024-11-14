@@ -92,17 +92,21 @@ class ReportController extends Controller
         $report = Report::with('bounty')->findOrFail($id);
         $isCompany = auth('company')->check() && auth('company')->id() === $report->bounty->company_id;
 
-        if($isCompany)
-        {
-            if($request->name===1){
-                $report->status = 1;
-                $report->user_id->balance += $report->bounty_id->reward;
-            }
+// fails to get input request when button pressed; fails to add user balance with reward
 
-            if($request->name===2){
-                $report->status = 2;
-            }
-        }
+        // if($isCompany)
+        // {
+            // if($request->name===1){
+                Report::where('id', $id)->update([
+                    'status' => 1],[
+                    'user_id->balance' =>  'user_id->balance'+'bounty_id->reward'
+                    ]);
+            // }
+
+        //     if($request->name===2){
+        //         $report->status = 2;
+        //     }
+        // }
 
         return redirect()->route('reports.show', ['id' => $report->id])->with('success', 'Report Status Changed.');
 

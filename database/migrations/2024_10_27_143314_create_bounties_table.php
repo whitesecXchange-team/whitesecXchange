@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('company_id')->constrained('companies')->onDelete('cascade');
             $table->text('description');
-            $table->integer('reward')->unsigned();
+            $table->decimal('reward')->unsigned();
             $table->timestamps();
         });
     }
