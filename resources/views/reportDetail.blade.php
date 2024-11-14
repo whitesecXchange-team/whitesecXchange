@@ -25,9 +25,22 @@
             @else
                 <p><em>File download is restricted to the report uploader and the assigning company.</em></p>
             @endif
+
+            
+            @if($isCompany)
+                <div class="company-buttons">
+                    <button class="approve-butt">Approve</button>
+                    <button class="reject-butt">Reject</button>
+                </div>
+            @endif
+
+        @else
+            <p>No files have been attached.</p>
+
         @endif
 
         <a href="{{ route('reports.page') }}" class="back-link">back to reports list</a>
+        
     </div>
     @include('footer')
 </body>
