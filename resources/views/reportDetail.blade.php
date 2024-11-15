@@ -37,6 +37,13 @@
                         @csrf
                         <button name="btn" value="2" class="reject-butt">Reject</button></form>
                 </div>
+
+                <div class="test-button">
+                    <form action="{{ route('report.acceptReport', ['reportId' => $report->id]) }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-success">Accept</button>
+                    </form>
+                </div>
             @endif
 
             @if($isUploader)

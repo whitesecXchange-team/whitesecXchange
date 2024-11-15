@@ -61,3 +61,5 @@ Route::get('/report/{id}/download', [ReportController::class, 'download'])->name
 Route::get('/leaderboard', [Controller::class, 'leaderboard'])->name('leaderboard');
 
 Route::post('/reports/{id}', [ReportController::class, 'approval'])->name('report.approval');
+
+Route::post('/report/{reportId}/accept', [ReportController::class, 'acceptReport'])->name('report.acceptReport');
