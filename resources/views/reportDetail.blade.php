@@ -38,12 +38,24 @@
                         <button name="btn" value="2" class="reject-butt">Reject</button></form>
                 </div>
 
-                <div class="test-button">
+                <!-- thanks griff -->
+                <!-- <div class="test-button">
                     <form action="{{ route('report.acceptReport', ['reportId' => $report->id]) }}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-success">Accept</button>
                     </form>
+                </div> -->
+
+            @elseif($report->status===1)
+                <div class="words">
+                    <p>This report has been approved</p>
                 </div>
+
+
+            @elseif($report->status===2)
+                <div class="words">
+                    <p>This report has been rejected</p>
+                </div>            
             @endif
 
             @if($isUploader)

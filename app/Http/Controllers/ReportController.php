@@ -102,8 +102,19 @@ class ReportController extends Controller
             if($request->btn==1){
                 Report::where('id', $id)->with('bounty')->with('user')->update([
                     'status' => 1,
-
                  ]);
+
+                
+                // Retrieve the bounty and report
+                $report = report::findOrFail($id);
+                $bounty = Bounty::findOrFail($report->bounty_id);
+
+                // Get the bounty hunter (user who submitted the report)
+                $bountyHunter = User::findOrFail($report->user_id);
+
+                // Add the reward to the bounty hunter's balance
+                $bountyHunter->balance += $bounty->reward;
+                $bountyHunter->save();
 
             }
 
@@ -117,19 +128,20 @@ class ReportController extends Controller
         return redirect()->route('reports.show', ['id' => $report->id])->with('success', 'Report Status Changed.');
     }
 
-    public function acceptReport($reportId)
-{
-    // Retrieve the bounty and report
-    $report = report::findOrFail($reportId);
-    $bounty = Bounty::findOrFail($report->bounty_id);
+    //thanks griff
+//     public function acceptReport($reportId)
+// {
+//     // Retrieve the bounty and report
+//     $report = report::findOrFail($reportId);
+//     $bounty = Bounty::findOrFail($report->bounty_id);
 
-    // Get the bounty hunter (user who submitted the report)
-    $bountyHunter = User::findOrFail($report->user_id);
+//     // Get the bounty hunter (user who submitted the report)
+//     $bountyHunter = User::findOrFail($report->user_id);
 
-    // Add the reward to the bounty hunter's balance
-    $bountyHunter->balance += $bounty->reward;
-    $bountyHunter->save();
-}
+//     // Add the reward to the bounty hunter's balance
+//     $bountyHunter->balance += $bounty->reward;
+//     $bountyHunter->save();
+// }
 
     /**
      * Show the form for editing the specified resource.
