@@ -8,7 +8,12 @@
     @include('nav')
     <body>
         <div class="container">
-
+            <div class="available-status">
+                @if($bounties->isEmpty())
+                    <p>No bounties available.</p>
+                @endif
+            </div>
+            
             @auth('company')
             <div class="create-bounty-container">
                 <a href="{{ route('bounty.create') }}" class="create-bounty-button">create bounty</a>

@@ -45,6 +45,7 @@
             <ul class="nav-selection">
                 <li id="bounties"><a href="{{ route('bounties') }}">BOUNTIES</a></li>
                 <li id="about-us"><a href="{{ route('about-us') }}">ABOUT US</a></li>
+                <li id="leaderboard"><a href="{{ route('leaderboard') }}">LEADERBOARD</a></li>
                 <li id="reports"><a href="{{ route('reports.page') }}">REPORTS</a></li>
             </ul>
         </div>

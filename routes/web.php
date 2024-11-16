@@ -57,3 +57,9 @@ Route::post('/bounty/{id}/report', [ReportController::class, 'store'])->name('re
 Route::get('/reports/{id}', [ReportController::class, 'show'])->name('reports.show');
 
 Route::get('/report/{id}/download', [ReportController::class, 'download'])->name('report.download');
+
+Route::get('/leaderboard', [Controller::class, 'leaderboard'])->name('leaderboard');
+
+Route::post('/reports/{id}', [ReportController::class, 'approval'])->name('report.approval');
+
+Route::post('/report/{reportId}/accept', [ReportController::class, 'acceptReport'])->name('report.acceptReport');

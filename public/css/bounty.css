@@ -3,6 +3,12 @@
   text-decoration: none;
 }
 
+.available-status {
+    font-family: "Share Tech Mono", monospace;
+    color: white;
+    margin: 40px;
+}
+
 html, body {
     background-color: #181818;
     height: 100%;
@@ -92,7 +98,6 @@ a.button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
 }
 
 .create-bounty-button {
