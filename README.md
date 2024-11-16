@@ -1,8 +1,27 @@
-this is basically a secure bounty web built with laravel 11 , designed for user to able search for available bounty that the company provides through this website.
+## **About whitesecXchange**
+whitesecXchange is a bounty board website where companies can post a bounty for ethical hackers to test their defenses. We hope to provide a marketplace for cybersecurity enthusiasts to strengthen their skills and defenses!
 
-features:
-1.register choice : user can choose between 2 roles , hacker and company
-2.bounties : bounties page provide information about all the available bounties that the company post or share and hacker can choose to take the bounty or not
-3.contact us : contact us pages provide the needed information to contact us
-4.home : home page consist of all the information that is need to be known about the website
-5.reports : once hacker done the bounty , hacker can upload their report on reports
+## **Features**
+### **General**
+- **Register, Login & Logout**: Users can choose whether to register as a hacker or a company, then they are able to login after creating an account, and vice versa.
+- **Profile Page**: Users can view their username on the profile page.
+- **About Us**: An about us page is available for users to learn more about whitesecXchange.
+- **Leaderboards**: Users can view the leaderboard to see the hacker with the highest rewards obtained.
+
+### **Hacker Role**
+- **View Bounties**: Hackers can see all the bounties posted by companies, which contains details and rewards upon completion.
+- **Submitting Reports**: Hackers can submit a report on a bounty that they tested on.
+- **Receiving Bounty Rewards**: Upon approval from the company who assigned the bounty, hackers receive the reward specified on the bounty.
+
+### **Company Role**
+- **Post a Bounty**: Companies can post bounties for hackers to test on.
+- **View Report Details**: Companies can view reports sent by hackers on their bounty.
+- **Report Approval**: Upon inspection, companies can decide whether to approve or reject the report submitted.
+
+## **Changes History**
+- (16/11/2024): Launch day!🎉🎉🎉
+
+## **Special Thanks**
+- **[Figma](https://www.figma.com/)**, as an application to create a prototype for our website.
+- **[Laravel](https://laravel.com/)**, as a free, open-source PHP framework for building web applications.
+- To our lecturers, seniors, and friends who provided feedback guided us on developing this application.
