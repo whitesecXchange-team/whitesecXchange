@@ -3,6 +3,7 @@ whitesecXchange is a bounty board website where companies can post a bounty for 
 
 ## **Deployment**
 We've made the deployment of this website easy. Just execute <code>run.sh</code> and voila, there is no need to do any of that composer install, php artisan migrate, etc.
+<code>./run.sh</code> on your terminal or GIT Bash.
 
 ## **Features**
 ### **General**
