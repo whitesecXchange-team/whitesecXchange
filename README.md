@@ -2,8 +2,8 @@
 whitesecXchange is a bounty board website where companies can post a bounty for ethical hackers to test their defenses. We hope to provide a marketplace for cybersecurity enthusiasts to strengthen their skills and defenses!
 
 ## **Deployment**
-We've made the deployment of this website easy. Just execute <code>run.sh</code> and voila, there is no need to do any of that composer install, php artisan migrate, etc.
-<br><code>./run.sh</code> on your terminal or GIT Bash.
+We've made the deployment of this website easy. There is no need to do any of that composer install, php artisan migrate, etc.
+<br><br> Simply execute <code>./run.sh</code> on your terminal or GIT Bash and voila!
 
 ## **Features**
 ### **General**
