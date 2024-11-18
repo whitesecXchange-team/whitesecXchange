@@ -1,6 +1,9 @@
 ## **About whitesecXchange**
 whitesecXchange is a bounty board website where companies can post a bounty for ethical hackers to test their defenses. We hope to provide a marketplace for cybersecurity enthusiasts to strengthen their skills and defenses!
 
+## **Deployment**
+We've made the deployment of this website easy. Just execute <code>run.sh</code> and voila, there is no need to do any of that composer install, php artisan migrate, etc.
+
 ## **Features**
 ### **General**
 - **Register, Login & Logout**: Users can choose whether to register as a hacker or a company, then they are able to login after creating an account, and vice versa.
